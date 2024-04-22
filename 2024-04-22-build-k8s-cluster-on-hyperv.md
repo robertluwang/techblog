@@ -36,9 +36,11 @@ cd ./hands-on-nativecloud/src/k8s-cri-dockerd
 - external - kind of bridge, vm<->host, vm->Internet
 
 `private network`
+
 It is isolated network, vm can access each other only.
 
 `internal network`
+
 It is private network plus host communication due to virtual NIC on host.
 
 It is similar with Host-only in Virtualbox.
@@ -50,6 +52,7 @@ The "Default Switch" is default NAT switch, the only issue is switch ip always c
 The good news is that it is possible to setup own static NAT network, to have stable test lab env, which is host-only + NAT if comparing with Virtualbox.
 
 `external switch`
+
 External switch will bind with physical NIC on host, sharing same network with host to access outside, ip assigned from DHCP.
 
 In my pc there is only Wi-Fi adaptor, so external switch will bind to Wi-Fi adaptor, it always crashes and lost all Wi-Fi Internet access during creating, have to recover by Network Reset.
